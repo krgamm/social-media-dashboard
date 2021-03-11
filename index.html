@@ -1,27 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <link rel="stylesheet" href="./sass/style.css">
+
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+<body>
+  <div class="pattern-bg"></div>
+  <section>
+    <div class="container">
+      <!-- Top of container -->
+      <nav>
+        <div class="heading-wrapper ">
+          <h1 class="title-primary">Social Media Dashboard</h1>
+          <p class="title-secondary">Total Followers: 23,004</p>
+        </div>
+        <div class="toggle-wrapper">
+          <p>Dark Mode</p>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider-round"></span>
+          </label>
+        </div>
+      </nav>
+
+      <!-- Card Wrapper -->
+      <ul class="card-wrapper">
+
+        <!-- FB card -->
+        <li id="fb" class="card">
+          <div class="accent-color"></div>
+          <div class="social-wrapper">
+            <img class="social-logo" src="./images/icon-facebook.svg" alt="">
+            <p class="username">@nathanf</p>
+          </div>
+          <div class="follower-wrapper">
+            <h2 class="follower-number">1987</h2>
+            <h3>Followers</h3>
+          </div>
+          <div class="counter">
+            <img class="arrow" src="./images/icon-up.svg" alt="">
+            <p class="ticker">12 Today</p>
+          </div>
+        </li>
+        <!-- Twitter Card -->
+        <li id="twt" class="card">
+          <div class="accent-color"></div>
+          <div class="social-wrapper">
+            <img class="social-logo" src="./images/icon-twitter.svg" alt="">
+            <p class="username">@nathanf</p>
+          </div>
+          <div class="follower-wrapper">
+            <h2 class="follower-number">1044</h2>
+            <h3>Followers</h3>
+          </div>
+          <div class="counter">
+            <img class="arrow" src="./images/icon-up.svg" alt="">
+            <p class="ticker">99 Today</p>
+          </div>
+        </li>
+
+        <!-- Instagram Card -->
+        <li id="ig" class="card">
+          <div class="accent-color"></div>
+          <div class="social-wrapper">
+            <img class="social-logo" src="./images/icon-instagram.svg" alt="">
+            <p class="username">@nathanf</p>
+          </div>
+          <div class="follower-wrapper">
+            <h2 class="follower-number">11k</h2>
+            <h3>Followers</h3>
+          </div>
+          <div class="counter">
+            <img class="arrow" src="./images/icon-up.svg" alt="">
+            <p class="ticker">1099 Today</p>
+          </div>
+        </li>
+
+        <!-- YouTube Card -->
+        <li id="yt" class="card">
+          <div class="accent-color"></div>
+          <div class="social-wrapper">
+            <img class="social-logo" src="./images/icon-youtube.svg" alt="">
+            <p class="username">@nathanf</p>
+          </div>
+          <div class="follower-wrapper">
+            <h2 class="follower-number">8239</h2>
+            <h3>Followers</h3>
+          </div>
+          <div class="counter">
+            <img class="arrow" src="./images/icon-down.svg" alt="">
+            <p class="ticker">144 Today</p>
+          </div>
+        </li>
+      </ul>
+      <!-- Bottom of container -->
+    </div>
+  </section>
+
 
   Dark Mode
 
-  
+
 
   @nathanf
   1987
@@ -78,10 +167,12 @@
   Total Views
   1407
   12%
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <!-- <script src="script.js"></script> -->
 </body>
+
 </html>
