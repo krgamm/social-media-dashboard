@@ -51,6 +51,7 @@
 .container {
   width: 1440px;
   margin: 0 auto 0 auto;
+  padding: 0 30px 0 30px;
 }
 .rounded-rectangle {
   border-radius: 50px;
@@ -62,6 +63,9 @@ body {
 section {
   @extend .flex-row;
   padding: 30px 0 30px 0;
+}
+.overview {
+  color: var(--lightSecondaryText);
 }
 nav {
   @extend .flex-row;
@@ -110,8 +114,10 @@ nav {
 }
 
 .card-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+
+  height: 250px;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
   margin-top: 60px;
   justify-content: space-between;
@@ -119,9 +125,12 @@ nav {
 
 .card {
   @extend .flex-column;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
   align-items: center;
   background-color: var(--lightCardBG);
-  padding: 32px 72px 32px 72px;
+  // padding: 32px 72px 32px 72px;
   border-radius: 8px;
   .accent-color {
     width: 100%;
@@ -159,26 +168,68 @@ nav {
       color: var(--lightSecondaryText);
     }
   }
-  .counter {
-    @extend .flex-row;
-    align-items: center;
-    .arrow {
-      height: 6px;
-      margin-right: 4px;
+}
+.counter {
+  @extend .flex-row;
+  align-items: center;
+  .arrow {
+    height: 6px;
+    margin-right: 4px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+.secondary-card-wrapper {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+.secondary-card {
+  @extend .flex-row;
+  // width: 100%;
+  height: 100px;
+  padding: 30px;
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: var(--lightCardBG);
+  .column-1-details {
+    @extend .flex-column;
+    justify-content: space-between;
+    h3 {
+      font-size: 16px;
     }
     p {
-      font-size: 16px;
+      font-size: 40px;
       font-weight: 700;
+      color: var(--lightPrimaryText);
+    }
+  }
+  .column-2-details {
+    @extend .flex-column;
+    justify-content: space-between;
+
+    .logo {
+      width: 25px;
+      height: 25px;
+      align-self: flex-end;
     }
   }
 }
 
+.ticker-up {
+  color: var(--LimeGreen);
+}
+.ticker-down {
+  color: var(--BrightRed);
+}
 #fb {
   .accent-color {
     background-color: var(--Facebook);
-  }
-  .ticker {
-    color: var(--LimeGreen);
   }
 }
 
@@ -186,23 +237,14 @@ nav {
   .accent-color {
     background-color: var(--Twitter);
   }
-  .ticker {
-    color: var(--LimeGreen);
-  }
 }
 #ig {
   .accent-color {
     background: linear-gradient(to right, #fdc468, #df4996);
   }
-  .ticker {
-    color: var(--LimeGreen);
-  }
 }
 #yt {
   .accent-color {
     background-color: var(--YouTube);
-  }
-  .ticker {
-    color: var(--BrightRed);
   }
 }

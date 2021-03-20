@@ -36,7 +36,7 @@
   background-color: var(--lightBGpattern);
 }
 
-.flex-column, .card .follower-wrapper, .card {
+.flex-column, .secondary-card .column-2-details, .secondary-card .column-1-details, .card .follower-wrapper, .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,7 +46,7 @@
           flex-direction: column;
 }
 
-.flex-row, .card .counter, .card .social-wrapper, .toggle-wrapper .switch, .toggle-wrapper, nav, section {
+.flex-row, .secondary-card, .counter, .card .social-wrapper, .toggle-wrapper .switch, .toggle-wrapper, nav, section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,6 +59,7 @@
 .container {
   width: 1440px;
   margin: 0 auto 0 auto;
+  padding: 0 30px 0 30px;
 }
 
 .rounded-rectangle, .toggle-wrapper .switch .slider-round, .toggle-wrapper .switch {
@@ -71,6 +72,10 @@ body {
 
 section {
   padding: 30px 0 30px 0;
+}
+
+.overview {
+  color: var(--lightSecondaryText);
 }
 
 nav {
@@ -120,8 +125,10 @@ nav {
 }
 
 .card-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 250px;
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
@@ -132,11 +139,15 @@ nav {
 }
 
 .card {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: var(--lightCardBG);
-  padding: 32px 72px 32px 72px;
   border-radius: 8px;
 }
 .card .accent-color {
@@ -176,46 +187,88 @@ nav {
   letter-spacing: 8px;
   color: var(--lightSecondaryText);
 }
-.card .counter {
+
+.counter {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.card .counter .arrow {
+.counter .arrow {
   height: 6px;
   margin-right: 4px;
 }
-.card .counter p {
+.counter p {
   font-size: 16px;
   font-weight: 700;
+}
+
+.secondary-card-wrapper {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+}
+
+.secondary-card {
+  height: 100px;
+  padding: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 8px;
+  background-color: var(--lightCardBG);
+}
+.secondary-card .column-1-details {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.secondary-card .column-1-details h3 {
+  font-size: 16px;
+}
+.secondary-card .column-1-details p {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--lightPrimaryText);
+}
+.secondary-card .column-2-details {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.secondary-card .column-2-details .logo {
+  width: 25px;
+  height: 25px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.ticker-up {
+  color: var(--LimeGreen);
+}
+
+.ticker-down {
+  color: var(--BrightRed);
 }
 
 #fb .accent-color {
   background-color: var(--Facebook);
 }
-#fb .ticker {
-  color: var(--LimeGreen);
-}
 
 #twt .accent-color {
   background-color: var(--Twitter);
-}
-#twt .ticker {
-  color: var(--LimeGreen);
 }
 
 #ig .accent-color {
   background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
   background: linear-gradient(to right, #fdc468, #df4996);
 }
-#ig .ticker {
-  color: var(--LimeGreen);
-}
 
 #yt .accent-color {
   background-color: var(--YouTube);
-}
-#yt .ticker {
-  color: var(--BrightRed);
 }
 /*# sourceMappingURL=style.css.map */
